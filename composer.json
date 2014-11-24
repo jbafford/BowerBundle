@@ -1,0 +1,20 @@
+{
+    "name": "jbafford/bower-bundle",
+    "type": "symfony-bundle",
+    "description": "Provides a simple interface to execute bower from the cli or via composer install/update",
+    "keywords": ["bafford", "bower"],
+    "homepage": "https://github.com/jbafford/BowerBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "John Bafford"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": ">=2.5"
+    },
+    "autoload": {
+        "psr-4": { "Bafford\\BowerBundle\\": "" }
+    }
+}
