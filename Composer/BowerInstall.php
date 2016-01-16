@@ -8,16 +8,14 @@ class BowerInstall extends \Sensio\Bundle\DistributionBundle\Composer\ScriptHand
 {
     public static function installComponents(CommandEvent $event, $action)
     {
-        $options = self::getOptions($event);
-        $appDir = $options['symfony-app-dir'];
-
-        if (!is_dir($appDir)) {
-            echo 'The symfony-app-dir ('.$appDir.') specified in composer.json was not found in '.getcwd().'.'.PHP_EOL;
-
+        $options = static::getOptions($event);
+        
+        $consoleDir = static::getConsoleDir($event, $action);
+        if(!$consoleDir) {
             return;
         }
         
-        static::executeCommand($event, $appDir, "bafford:bower:$action");
+        static::executeCommand($event, $consoleDir, "bafford:bower:$action");
     }
     
     public static function postInstall(CommandEvent $event)

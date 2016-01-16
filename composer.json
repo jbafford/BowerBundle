@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": ">=5.4",
-        "symfony/symfony": ">=2.5"
+        "symfony/symfony": ">=2.5",
+        "sensio/distribution-bundle": ">=3.0"
     },
     "autoload": {
         "psr-4": { "Bafford\\BowerBundle\\": "" }
